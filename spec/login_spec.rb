@@ -7,15 +7,15 @@ describe "User Features" do
     go_to_login_page
 
     fill_in 'username', with: 'Maria'
-    # expect(find('#username').value).to eq "Maria"
+    expect(find('#username').value).to eq "Maria"
     fill_in 'password', with: '1qwerty2'
-    # expect(find('#password').value).to eq "1qwerty2"
+    expect(find('#password').value).to eq "1qwerty2"
 
     click_button('Login')
     expect(current_url).to eq('https://me.sumup.com/en-us/login/')
   end
 
-  it "login user" do
+  it "checks for transactions" do
     go_to_login_page
     fill_in_credentials
 
@@ -27,6 +27,5 @@ describe "User Features" do
 
     expect(page).to have_content('We couldn’t find anything that matches your search.')
     # in case of internationalization, better using translation keys
-
   end
 end
