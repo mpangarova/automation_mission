@@ -188,7 +188,9 @@ GET '/v0.1/me/merchant-profile/settings'
 
 ## `/feature-toggles`
 ```HTTP
-GET '/v0.1/feature-toggles?country=BG&merchant_code=MCCGXT7H&name=XXX'
+GET '/v0.1/feature-toggles?country=BG
+                          &merchant_code=MCCGXT7H
+                          &name=XXX'
 ```
 - name=gdpr_enforced
 ### Response
