@@ -1,19 +1,39 @@
 # Account Information
 
-
 ```
+base_url: https://me.sumup.com
 authority: me.sumup.com
 method: GET
-path: /v0.1/me/merchant-profile/bank-accounts
+path: /v0.1
 scheme: https
 cookie: XSRF-TOKEN=ad21d045b57851d1; SumUp.did=s%3AuKNwT9isQIVej9VGPtDUUSalm6QFHYea.7ezBL7WKHSE9vGrAjxuR2YNPHy6TQrTBEGzClMbVeLM
 ```
 
 Requires `x-xsrf-token` header and cookies `XSRF-TOKEN, SumUp.did`.
 
+## `/me/merchant-profile/bank-accounts`
+```HTTP
+GET '/v0.1/me/merchant-profile/bank-accounts'
+```
+
+### Response
+```JSON
+[
+    {
+        "account_holder_name": "Maria Pangarova",
+        "created_at": "2019-01-23T19:12:42.412Z",
+        "iban": "BG******************78",
+        "primary": true,
+        "status": "VERIFICATION_FAILED",
+        "swift": "ABCDEFGHXXX"
+    }
+]
+```
+
+
 ## `/me`
 ```HTTP
-GET '<API-URL>/v0.1/me'
+GET '/v0.1/me'
 ```
 
 ### Response
@@ -67,7 +87,7 @@ GET '<API-URL>/v0.1/me'
 
 ## `/me/documents_settings`
 ```HTTP
-GET '<API-URL>/v0.1/me/documents_settings'
+GET '/v0.1/me/documents_settings'
 ```
 
 ### Response
@@ -83,7 +103,7 @@ GET '<API-URL>/v0.1/me/documents_settings'
 
 ## `/me/gdpr-agreements`
 ```HTTP
-GET '<API-URL>/v0.1/me/gdpr-agreements'
+GET '/v0.1/me/gdpr-agreements'
 ```
 
 ### Response
@@ -110,29 +130,12 @@ GET '<API-URL>/v0.1/me/gdpr-agreements'
 ```
 
 
-## `/me/merchant-profile/bank-accounts`
-```HTTP
-GET '<API-URL>/v0.1/me/merchant-profile/bank-accounts'
-```
 
-### Response
-```JSON
-[
-    {
-        "account_holder_name": "Maria Pangarova",
-        "created_at": "2019-01-23T19:12:42.412Z",
-        "iban": "BG******************78",
-        "primary": true,
-        "status": "VERIFICATION_FAILED",
-        "swift": "ABCDEFGHXXX"
-    }
-]
-```
 
 
 ## `/me/merchant-profile/settings`
 ```HTTP
-GET '<API-URL>/v0.1/me/merchant-profile/settings'
+GET '/v0.1/me/merchant-profile/settings'
 ```
 
 ### Response
@@ -154,7 +157,7 @@ GET '<API-URL>/v0.1/me/merchant-profile/settings'
 
 ## `/me/permissions`
 ```HTTP
-GET '<API-URL>/v0.1/me/permissions'
+GET '/v0.1/me/permissions'
 ```
 
 ### Response
@@ -165,7 +168,7 @@ GET '<API-URL>/v0.1/me/permissions'
 
 ## `/me/registration`
 ```HTTP
-GET '<API-URL>/v0.1/me/registration'
+GET '/v0.1/me/registration'
 ```
 
 ### Response
@@ -215,7 +218,7 @@ GET '<API-URL>/v0.1/me/registration'
 
 ## `/me/risk-profile`
 ```HTTP
-GET '<API-URL>/v0.1/me/risk-profile'
+GET '/v0.1/me/risk-profile'
 ```
 
 ### Response
@@ -248,7 +251,7 @@ GET '<API-URL>/v0.1/me/risk-profile'
 
 ## `/feature-toggles`
 ```HTTP
-GET '<API-URL>/v0.1/feature-toggles?country=BG&merchant_code=MCCGXT7H&name=XXX'
+GET '/v0.1/feature-toggles?country=BG&merchant_code=MCCGXT7H&name=XXX'
 ```
 - name=sumup_card
 ### Response
@@ -271,7 +274,7 @@ GET '<API-URL>/v0.1/feature-toggles?country=BG&merchant_code=MCCGXT7H&name=XXX'
 
 ## `/referrals/campaigns`
 ```HTTP
-GET '<API-URL>/v0.1/referrals/campaigns?locale=en&country=BG'
+GET '/v0.1/referrals/campaigns?locale=en&country=BG'
 ```
 
 ### Response
