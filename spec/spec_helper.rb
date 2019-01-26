@@ -2,6 +2,7 @@ require 'capybara/rspec'
 require 'require_all'
 
 require_all 'steps/*.rb'
+require_all 'spec/expectations/*.rb'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
